@@ -1,0 +1,32 @@
+@font-face {
+  font-family: "Anurati";
+  src: url("./assets/fonts/ANURATI\ Free\ Font/Anurati-Regular.otf");
+}
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,700;1,400&display=swap");
+
+/* direct targeting tag here  */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  color: #fff;
+}
+h1,
+h2,
+h3,
+h4 {
+  color: #fff;
+  /* font-family: "Anurati";
+  text-transform: uppercase;
+  text-align: center; */
+}
+a {
+  text-decoration: none;
+}
+li {
+  list-style: none;
+  color: #fff;
+}

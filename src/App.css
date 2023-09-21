@@ -1,0 +1,188 @@
+/* background applied here  */
+
+.mainContainer {
+  background: url(./assets/imgs/146390-cloud-water-shore-dock-seawater-1920x1080.jpg)
+    no-repeat center;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* left side of component  ===================================== */
+
+.leftSide {
+  background-color: rgba(20, 20, 20, 0.616);
+  height: 550px;
+  width: 250px;
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px;
+}
+.searchArea {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+  overflow: hidden;
+}
+.searchArea input {
+  background-color: transparent;
+  border: none;
+  text-align: center;
+  /* font-family: sans-serif; */
+  padding: 0 0 5px 0;
+  border-bottom: 2px solid rgb(131, 129, 129);
+  color: #fff;
+  outline: none;
+  text-transform: capitalize;
+  &::placeholder {
+    color: rgb(214, 206, 206);
+    opacity: 1;
+    font-size: 13px;
+  }
+}
+.searchArea button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  margin-left: 5px;
+  &:hover {
+    color: yellow;
+  }
+}
+.searchArea button span {
+  font-size: 30px;
+}
+.conditionArea {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80%;
+  width: 100%;
+  overflow: hidden;
+}
+.conditionArea p {
+  font-size: 12px;
+  color: yellow;
+  font-family: "Merriweather", serif;
+}
+.dataArea {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.dataArea div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 80%;
+  padding-bottom: 10px;
+  border-bottom: 1px solid gray;
+}
+.dataArea div h1 {
+  /* font-family: "Material Symbols Outlined"; */
+  font-family: 'Merriweather', serif;
+  font-size: 26px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
+.dataArea div span {
+  font-size: 60px;
+  color: yellow;
+  margin-top: 10px;
+}
+.sunIcon {
+  transform: rotate(0deg);
+  animation: rotateSun 10s linear infinite;
+}
+@keyframes rotateSun {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+ul {
+  margin: 0;
+  padding: 0;
+  margin-top: 10px;
+  width: 80%;
+}
+ul .countryName {
+  text-align: center;
+  display: block;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  padding-bottom: 5px;
+  border-bottom: 1px solid gray;
+}
+ul li {
+  margin-top: 5px;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 5px;
+  border-bottom: 1px solid gray;
+}
+ul li span:nth-child(1) {
+  color: #0bd5d8;
+  font-size: 14px;
+  font-weight: 600;
+  width: 50%;
+}
+ul li span:nth-child(2) {
+  font-size: 13px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  width: 50%;
+  text-align: right;
+  font-family: 'Croissant One', cursive;
+}
+
+ul li span:nth-child(2):hover {
+  transform: scale(1.1);
+  font-style: italic;
+  color: yellow;
+}
+
+/* Right side of component  ===================================== */
+
+.rightSide {
+  background: url(./assets/imgs/szabo-viktor-28ZbKOWiZfs-unsplash.jpg) no-repeat
+    top;
+  background-size: cover;
+  height: 550px;
+  width: 450px;
+  border-bottom-right-radius: 5px;
+  border-top-right-radius: 5px;
+}
+.week {
+  font-family: "Anurati", sans-serif;
+  color: black;
+  font-size: 24px;
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.time {
+  font-family: sans-serif;
+  color: black;
+  font-size: 24px;
+  text-align: center;
+  margin-top: 20px;
+}
+.rightSide .cloudIcon{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+}
+.rightSide .cloudIcon span{
+  font-size: 80px;
+  color: black;
+}
