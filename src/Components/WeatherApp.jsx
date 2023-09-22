@@ -116,22 +116,19 @@ export const WeatherApp = () => {
           <span class="material-symbols-outlined">{cloudy}</span>
         </div>
       </div>
-      <div socialArea>
-        <div className="github">
-          <a href="https://github.com/shahraim" target="blank">
-            <i class="fa-brands fa-github"></i>
-          </a>
-        </div>
-        <div className="github">
-          <a href="https://www.linkedin.com/in/shahraim-khan-2280ab26b/">
-            <i class="fa-brands fa-linkedin"></i>
-          </a>
-        </div>
-        <div className="github">
-          <a href="https://www.instagram.com/shahraim_graphy" target="blank">
-            <i class="fa-brands fa-instagram"></i>
-          </a>
-        </div>
+      <div className="socialArea">
+        <a href="https://github.com/shahraim/WeatherAPP" target="blank">
+          <i class="fa-brands fa-github"></i>
+        </a>
+        <a
+          href="https://www.linkedin.com/in/shahraim-khan-2280ab26b/"
+          target="blank"
+        >
+          <i class="fa-brands fa-linkedin"></i>
+        </a>
+        <a href="https://www.instagram.com/shahraim_graphy" target="blank">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
       </div>
     </div>
   );
