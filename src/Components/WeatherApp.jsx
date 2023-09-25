@@ -36,6 +36,7 @@ export const WeatherApp = () => {
         console.error("Error fetching weather data:", err);
         setError(name);
         setCloudy(false);
+        setName("");
         setWeatherData(null);
       });
   }
@@ -98,6 +99,14 @@ export const WeatherApp = () => {
             </p>
           )}
         </div>
+        <div className="develop">
+          <p>
+            <a href="https://shahraim-portfolio.vercel.app/" target="blank">
+              Designed and Developed by :{" "}
+              <span className="coolText">Shahraim_Khan</span>
+            </a>
+          </p>
+        </div>
       </div>
       <div className="rightSide">
         <div className="dateAndTime">
@@ -113,21 +122,21 @@ export const WeatherApp = () => {
           </div>
         </div>
         <div className="cloudIcon">
-          <span class="material-symbols-outlined">{cloudy}</span>
+          <span className="material-symbols-outlined">{cloudy}</span>
         </div>
       </div>
       <div className="socialArea">
-        <a href="https://github.com/shahraim/WeatherAPP" target="blank">
-          <i class="fa-brands fa-github"></i>
+        <a href="https://github.com/shahraim/WeatherAPP" target="_blank">
+          <i className="fab fa-github"></i>
         </a>
         <a
           href="https://www.linkedin.com/in/shahraim-khan-2280ab26b/"
-          target="blank"
+          target="_blank"
         >
-          <i class="fa-brands fa-linkedin"></i>
+          <i className="fab fa-linkedin"></i>
         </a>
-        <a href="https://www.instagram.com/shahraim_graphy" target="blank">
-          <i class="fa-brands fa-instagram"></i>
+        <a href="https://www.instagram.com/shahraim_graphy" target="_blank">
+          <i className="fab fa-instagram"></i>
         </a>
       </div>
     </div>

@@ -149,6 +149,20 @@ ul li span:nth-child(2):hover {
   font-style: italic;
   color: yellow;
 }
+.develop{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.develop p a{
+  font-size: 13px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: #0bd5d8;
+}
+.develop p a .coolText {
+  color: yellow; 
+  font-size: 12px;
+}
 
 /* Right side of component  ===================================== */
 
@@ -204,3 +218,6 @@ ul li span:nth-child(2):hover {
   color: black;
   transform: scale(1.1) ;
 }
+
+
+/* ======= fMedia Query ======= */
