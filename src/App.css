@@ -158,6 +158,9 @@ ul li span:nth-child(2):hover {
   font-size: 13px;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   color: #0bd5d8;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
 }
 .develop p a .coolText {
   color: yellow; 

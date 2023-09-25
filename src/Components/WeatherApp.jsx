@@ -102,7 +102,7 @@ export const WeatherApp = () => {
         <div className="develop">
           <p>
             <a href="https://shahraim-portfolio.vercel.app/" target="blank">
-              Designed and Developed by :{" "}
+              Designed and Developed by
               <span className="coolText">Shahraim_Khan</span>
             </a>
           </p>
