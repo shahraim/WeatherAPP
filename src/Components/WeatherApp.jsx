@@ -6,6 +6,7 @@ export const WeatherApp = () => {
   const [name, setName] = useState("");
   const [cloudy, setCloudy] = useState(false);
   const [error, setError] = useState(null);
+  const [isDay, setIsDay] = useState(true);
   const apiKey = "aad04773b0b2b7b7c3c7a4918c583f59";
   const [currentTime, setCurrentTime] = useState(new Date());
 
@@ -31,6 +32,13 @@ export const WeatherApp = () => {
           setCloudy("partly_cloudy_day");
         }
         setName("");
+        const currentTimeMillis = new Date().getTime();
+        const sunriseMillis = res.data.sys.sunrise * 1000;
+        const sunsetMillis = res.data.sys.sunset * 1000;
+        const isDay =
+          currentTimeMillis >= sunriseMillis &&
+          currentTimeMillis < sunsetMillis;
+        setIsDay(isDay);
       })
       .catch((err) => {
         console.error("Error fetching weather data:", err);
@@ -67,8 +75,12 @@ export const WeatherApp = () => {
             <div className="dataArea">
               <div>
                 <h1>{weatherData.name}</h1>
-                <span class="material-symbols-outlined sunIcon">
-                  light_mode
+                <span
+                  className={`material-symbols-outlined ${
+                    isDay ? "sunIcon" : "moonIcon"
+                  }`}
+                >
+                  {isDay ? "light_mode" : "nights_stay"}
                 </span>
               </div>
               <ul>
