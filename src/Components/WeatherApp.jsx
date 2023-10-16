@@ -1,5 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
+import { toast } from "react-toastify";
 
 export const WeatherApp = () => {
   const [weatherData, setWeatherData] = useState(null);
@@ -8,6 +9,9 @@ export const WeatherApp = () => {
   const [error, setError] = useState(null);
   const [isDay, setIsDay] = useState(true);
   const apiKey = "aad04773b0b2b7b7c3c7a4918c583f59";
+  // const apiKey = process.env.REACT_APP;
+  // console.log(apiKey);
+
   const [currentTime, setCurrentTime] = useState(new Date());
 
   const url = `https://api.openweathermap.org/data/2.5/weather?q=${name}&appid=${apiKey}`;
@@ -15,7 +19,7 @@ export const WeatherApp = () => {
     axios
       .get(url)
       .then((res) => {
-        console.log(res.data);
+        // console.log(res.data);
         setWeatherData(res.data);
         let data = res.data.weather[0].main;
         if (data === "Clear") {
@@ -41,7 +45,19 @@ export const WeatherApp = () => {
         setIsDay(isDay);
       })
       .catch((err) => {
-        console.error("Error fetching weather data:", err);
+        if (err.response) {
+          console.log("API Error Response:", err.response);
+          if (err.response.status === 401) {
+            // console.error("API Error: Unauthorized");
+            toast.error("API Error: Unauthorized");
+          } else {
+            // console.error("API Error:", err.response.data.message);
+            toast.error(`API Error: ${err.response.data.message}`);
+          }
+        } else {
+          // console.error("Network Error:", err.message);
+          toast.error("Network Error: Please check your internet connection");
+        }
         setError(name);
         setCloudy(false);
         setName("");

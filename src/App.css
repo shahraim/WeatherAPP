@@ -3,11 +3,13 @@
 .mainContainer {
   background: url(./assets/imgs/146390-cloud-water-shore-dock-seawater-1920x1080.jpg)
     no-repeat center;
+  background-size: cover;
   height: 100vh;
   width: 100vw;
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 }
 
 /* left side of component  ===================================== */
@@ -59,7 +61,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 80%;
+  height: 75%;
   width: 100%;
   overflow: hidden;
 }
@@ -149,21 +151,22 @@ ul li span:nth-child(2):hover {
   font-style: italic;
   color: yellow;
 }
-.develop{
+.develop {
   display: flex;
   justify-content: center;
   align-items: center;
+  /* padding-bottom: 200px; */
 }
-.develop p a{
+.develop p a {
   font-size: 13px;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   color: #0bd5d8;
   text-align: center;
   display: flex;
   flex-direction: column;
 }
 .develop p a .coolText {
-  color: yellow; 
+  color: yellow;
   font-size: 12px;
 }
 
@@ -219,8 +222,37 @@ ul li span:nth-child(2):hover {
 }
 .socialArea a:hover {
   color: black;
-  transform: scale(1.1) ;
+  transform: scale(1.1);
 }
 
-
-/* ======= fMedia Query ======= */
+/* ======= Media Query ======= */
+@media screen and (max-width: 550px) {
+  .mainContainer {
+    flex-direction: column-reverse;
+    justify-content: left;
+  }
+  .leftSide {
+    width: 95%;
+    margin: 0;
+    height: 64%;
+    border-radius: 20px;
+  }
+  .rightSide {
+    width: 95%;
+    height: 30%;
+    margin: 15px 0;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    .cloudIcon{
+      margin: 0;
+    }
+  }
+  .week{
+    margin: 0;
+  }
+  .socialArea {
+    display: none;
+  }
+}
