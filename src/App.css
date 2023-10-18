@@ -181,20 +181,17 @@ ul li span:nth-child(2):hover {
   border-bottom-right-radius: 5px;
   border-top-right-radius: 5px;
 }
-.week {
-  font-family: "Anurati", sans-serif;
+.dateAndTime {
   color: black;
+  align-items: center;
   font-size: 24px;
   text-transform: uppercase;
   text-align: center;
+  font-family: "Anurati", sans-serif;
   margin-top: 50px;
 }
-
 .time {
   font-family: sans-serif;
-  color: black;
-  font-size: 24px;
-  text-align: center;
   margin-top: 20px;
 }
 .rightSide .cloudIcon {
@@ -245,11 +242,11 @@ ul li span:nth-child(2):hover {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    .cloudIcon{
+    .cloudIcon {
       margin: 0;
     }
   }
-  .week{
+  .dateAndTime {
     margin: 0;
   }
   .socialArea {

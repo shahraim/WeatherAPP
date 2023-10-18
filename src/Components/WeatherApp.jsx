@@ -9,8 +9,6 @@ export const WeatherApp = () => {
   const [error, setError] = useState(null);
   const [isDay, setIsDay] = useState(true);
   const apiKey = "aad04773b0b2b7b7c3c7a4918c583f59";
-  // const apiKey = process.env.REACT_APP;
-  // console.log(apiKey);
 
   const [currentTime, setCurrentTime] = useState(new Date());
 
